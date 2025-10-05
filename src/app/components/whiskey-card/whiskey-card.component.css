@@ -1,0 +1,50 @@
+:host {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.card {
+  background-color: #f2e6d3;
+  border: 2px solid #704214;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(28, 21, 16, 0.2);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(28, 21, 16, 0.3);
+}
+
+.whiskey-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1c1510;
+  margin-bottom: 15px;
+}
+
+.country-toggle {
+  background-color: #b8860b;
+  color: #f2e6d3;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.country-toggle:hover {
+  background-color: #704214;
+}
+
+.country-content {
+  margin-top: 15px;
+  padding: 15px;
+  background-color: #332619;
+  color: #f2e6d3;
+  border-radius: 5px;
+  border-left: 4px solid #b8860b;
+}

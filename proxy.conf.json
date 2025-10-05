@@ -1,0 +1,7 @@
+{
+  "/api": {
+    "target": "https://whiskyhunter.net",
+    "secure": true,
+    "changeOrigin": true
+  }
+}

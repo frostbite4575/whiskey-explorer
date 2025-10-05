@@ -1,0 +1,11 @@
+<div class="card">
+  <div class="whiskey-name">{{whiskey.name}}</div>
+  
+  <button class="country-toggle" (click)="toggleCountry()">
+    {{ isCountryExpanded ? 'Hide Country' : 'Show Country' }}
+  </button>
+  
+  @if (isCountryExpanded) {
+    <div class="country-content">{{whiskey.country}}</div>
+  }
+</div>
