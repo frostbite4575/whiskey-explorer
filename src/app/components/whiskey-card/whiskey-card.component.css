@@ -6,22 +6,41 @@
 .card {
   background-color: #f2e6d3;
   border: 2px solid #704214;
-  border-radius: 8px;
+  border-radius: 12px;
   padding: 20px;
-  box-shadow: 0 2px 8px rgba(28, 21, 16, 0.2);
+  box-shadow: 0 4px 12px rgba(28, 21, 16, 0.3);
   transition: transform 0.2s;
+  
+  /* YouTube Shorts dimensions - tall and narrow */
+  width: 350px;
+  min-height: 500px;
+  max-height: 700px;
+  overflow-y: auto;
+  
+  /* Hide scrollbar */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  
+  display: flex;
+  flex-direction: column;
+}
+
+.card::-webkit-scrollbar {
+  display: none;
 }
 
 .card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(28, 21, 16, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(28, 21, 16, 0.4);
 }
 
 .whiskey-name {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
   color: #1c1510;
   margin-bottom: 15px;
+  border-bottom: 2px solid #b8860b;
+  padding-bottom: 10px;
 }
 
 .country-toggle {
@@ -33,18 +52,119 @@
   cursor: pointer;
   font-size: 14px;
   font-weight: 600;
-  transition: background-color 0.3s;
+  transition: all 0.3s;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 .country-toggle:hover {
   background-color: #704214;
+  transform: scale(1.02);
 }
 
 .country-content {
-  margin-top: 15px;
-  padding: 15px;
+  margin-top: 10px;
+  padding: 12px;
   background-color: #332619;
   color: #f2e6d3;
   border-radius: 5px;
   border-left: 4px solid #b8860b;
+  font-size: 14px;
+}
+
+.notes-section {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 2px solid #b8860b;
+}
+
+.notes-section h3 {
+  color: #1c1510;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.add-note-form {
+  margin-bottom: 15px;
+}
+
+.add-note-form textarea {
+  width: 100%;
+  min-height: 100px;
+  max-height: 150px;
+  padding: 10px;
+  border: 2px solid #704214;
+  border-radius: 5px;
+  background-color: #f2e6d3;
+  color: #1c1510;
+  font-size: 14px;
+  resize: vertical;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+}
+
+.add-note-form button {
+  background-color: #b8860b;
+  color: #f2e6d3;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.add-note-form button:hover {
+  background-color: #704214;
+}
+
+.note {
+  background-color: #332619;
+  padding: 12px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  border-left: 3px solid #b8860b;
+}
+
+.note p {
+  color: #f2e6d3;
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  word-wrap: break-word;
+}
+
+.note small {
+  color: #b8860b;
+  font-size: 11px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.note textarea {
+  width: 100%;
+  min-height: 60px;
+  padding: 8px;
+  border: 2px solid #b8860b;
+  border-radius: 4px;
+  background-color: #1c1510;
+  color: #f2e6d3;
+  font-size: 14px;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+}
+
+.note button {
+  background-color: #704214;
+  color: #f2e6d3;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-right: 6px;
+  transition: background-color 0.3s;
+}
+
+.note button:hover {
+  background-color: #b8860b;
 }

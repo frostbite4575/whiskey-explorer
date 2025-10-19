@@ -8,4 +8,28 @@
   @if (isCountryExpanded) {
     <div class="country-content">{{whiskey.country}}</div>
   }
+
+
+  <div class="notes-section">
+  <h3>Notes</h3>
+
+<div class="add-note-form">
+  <textarea [(ngModel)]="newNoteText" placeholder="Write a note..."></textarea>
+  <button (click)="addNote()">Add Note</button>
 </div>
+
+
+
+@for (note of notes; track note.id) {
+  <div class="note">
+    @if (note.id === editingNoteId) {
+      <textarea [(ngModel)]="editingNoteText"></textarea>
+      <button (click)="saveEditedNote()">Save</button>
+      <button (click)="cancelEditingNote()">Cancel</button>
+    }@else{
+      <p>{{note.noteText}}</p>
+      <button (click)="startEditingNote(note.id)">Edit</button>
+      <button (click)="deleteNote(note.id)">Delete</button>
+    }
+</div>
+}
