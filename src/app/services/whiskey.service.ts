@@ -16,4 +16,7 @@ import { Observable } from "rxjs";
   getWhiskeys(): Observable<any[]> {
     return this.http.get<any[]>(`${this.apiUrl}distilleries_info/`);
   }
+  getPriceHistory(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiUrl}auctions_data/`);
+  }
 }
