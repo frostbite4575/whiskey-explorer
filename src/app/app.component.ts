@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { WhiskeyListComponent } from './components/whiskey-list/whiskey-list.component';
+import { WhiskeyPriceChartComponent } from "./components/whiskey-price-chart/whiskey-price-chart.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,WhiskeyListComponent],
+  imports: [RouterOutlet, WhiskeyListComponent, WhiskeyPriceChartComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
